@@ -10273,6 +10273,9 @@ h6 {
     list-style-type: none;
 }
 
+
+/* Timeline */
+
 .timeline {
     position: relative;
     max-width: 1200px;
@@ -10320,7 +10323,8 @@ h6 {
     }
 }
 
-.timelineContainer:nth-child(1) {
+
+/* .timelineContainer:nth-child(1) {
     animation-delay: 0s;
 }
 
@@ -10334,7 +10338,7 @@ h6 {
 
 .timelineContainer:nth-child(4) {
     animation-delay: 3s;
-}
+} */
 
 .left-timelineContainer {
     left: 0;
@@ -10363,7 +10367,7 @@ h6 {
 
 .text-box {
     padding: 20px 30px;
-    background: #000;
+    background: #757575;
     position: relative;
     border-radius: 6px;
     font-size: 15px;
@@ -10386,7 +10390,7 @@ h6 {
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-left: 15px solid #000;
+    border-left: 15px solid #757575;
     right: -15px;
 }
 
@@ -10398,7 +10402,7 @@ h6 {
     z-index: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 15px solid #000;
+    border-right: 15px solid #757575;
     left: -15px;
 }
 
@@ -10446,5 +10450,3 @@ h6 {
         color:
     }
 }
-
-#fff
