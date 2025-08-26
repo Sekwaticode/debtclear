@@ -10460,7 +10460,7 @@ h6 {
     height: 60px;
     bottom: 40px;
     right: 40px;
-    background-color: #343a40;
+    background-color: transparent;
     color: #FFF;
     border-radius: 50px;
     text-align: center;
@@ -10471,3 +10471,5 @@ h6 {
 .my-float {
     margin-top: 16px;
 }
+
+ansparent
