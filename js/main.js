@@ -181,3 +181,22 @@ faqItems.forEach(item => {
     icon.textContent = item.classList.contains("active") ? "–" : "+";
   });
 });
+
+
+function sendToWhatsApp() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let date = document.getElementById("dateInput").value;
+    let time = document.getElementById("timeInput").value;
+    let service = document.getElementById("service").value;
+
+    let message = `*New Consultation Booking*%0A
+    👤 Name: ${name}%0A
+    📧 Email: ${email}%0A
+    📅 Date: ${date}%0A
+    ⏰ Time: ${time}%0A
+    📝 Service: ${service}`;
+
+    let whatsappURL = `https://wa.me/27722226329?text=${message}`;
+    window.open(whatsappURL, "_blank");
+}
