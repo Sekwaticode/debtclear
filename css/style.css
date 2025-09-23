@@ -4451,6 +4451,23 @@ input[type="button"].btn-block {
     list-style: none;
 }
 
+.navbar .special-nav {
+    background-color: #8C4DC9;
+    color: #fff !important;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar .special-nav:hover {
+    background-color: #732fb5; /* darker purple on hover */
+    color: #fff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+
 .nav-link {
     display: block;
     padding: 0.5rem 1rem;
@@ -11311,7 +11328,7 @@ h6 {
     bottom: 40px;
     right: 40px;
     background-color: transparent;
-    color: #8C4DC9;
+    color: #000;
     border-radius: 50px;
     text-align: center;
     font-size: 30px;

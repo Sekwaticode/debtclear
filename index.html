@@ -78,12 +78,15 @@
                             <a href="" class="nav-item nav-link">About</a>
                             <a href="" class="nav-item nav-link">Services</a>
                             <a href="" class="nav-item nav-link">Our Team</a>
+                            <a href="#" class="nav-item nav-link special-nav">Labour Relations</a>
+
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More</a>
                                 <div class="dropdown-menu rounded-0 m-0">
                                     <a href="#" class="dropdown-item">Debt Solutions</a>
                                     <a href="#" class="dropdown-item">Credit Advice</a>
                                     <a href="#" class="dropdown-item">Financial Tips</a>
+
                                 </div>
                             </div>
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -95,7 +98,6 @@
         </div>
     </div>
     <!-- Header End -->
-
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5 pb-5">
@@ -232,53 +234,77 @@
                 <div class="col-lg-6 py-5">
                     <div class="rounded p-5 my-5" style="background: rgba(55, 55, 63, .7);">
                         <h1 class="text-center text-white mb-4">Schedule a Consultation</h1>
-                        <form id="consultationForm" action="mailto:your@email.com" method="post" enctype="text/plain">
-                            <div class="form-group">
-                                <input type="text" class="form-control border-0 p-4" placeholder="Your Name" id="name" name="name" required />
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control border-0 p-4" placeholder="Your Email" id="email" name="email" required />
-                            </div>
-                            <div class="form-row">
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <div class="date" id="date" data-target-input="nearest">
-                                            <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Select Date" id="dateInput" name="date" data-target="#date" data-toggle="datetimepicker" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <div class="time" id="time" data-target-input="nearest">
-                                            <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Select Time" id="timeInput" name="time" data-target="#time" data-toggle="datetimepicker" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <select class="custom-select border-0 px-4" style="height: 47px;" id="service" name="service">
-                                    <option selected>Select a Service</option>
-                                    <option value="Debt Consolidation">Debt review removal</option>
-                                    <option value="Credit Counseling">Prescribes debt removal</option>
-                                    <option value="Debt Negotiation">Credit bereau update</option>
-                                    <option value="Debt Negotiation">Judgement removal</option>
-                                    <option value="Debt Negotiation">Credit advice</option>
-                                    <option value="Debt Negotiation">Admin order removal</option>
+                     <form id="consultationForm" action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="01f6d667-a3a2-4061-a63e-423227779cc4">
 
-                                </select>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <!-- Submit to Email -->
-                                <button class="btn btn-primary border-0 py-3 px-4" type="submit">
-                                    Book Consultation
-                                </button>
+  <div class="form-group">
+    <label for="name" class="sr-only">Your Name</label>
+    <input type="text" class="form-control border-0 p-4" placeholder="Your Name" id="name" name="name" required>
+  </div>
 
-                                <!-- Send to WhatsApp -->
-                                <button class="btn btn-primary border-0 py-3 px-4" type="button" onclick="sendToWhatsApp()">
-                                    Book via WhatsApp
-                                </button>
-                            </div>
-                        </form>
+  <div class="form-group">
+    <label for="email" class="sr-only">Your Email</label>
+    <input type="email" class="form-control border-0 p-4" placeholder="Your Email" id="email" name="email" required>
+  </div>
+
+  <div class="form-row">
+    <div class="col-6">
+      <div class="form-group">
+        <input type="date" class="form-control border-0 p-4" id="dateInput" name="date" required>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="form-group">
+        <input type="time" class="form-control border-0 p-4" id="timeInput" name="time" required>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <select class="custom-select border-0 px-4" style="height: 47px;" id="service" name="service" required>
+      <option selected disabled>Select a Service</option>
+      <option value="Debt review removal">Debt review removal</option>
+      <option value="Prescribed debt removal">Prescribed debt removal</option>
+      <option value="Credit bureau update">Credit bureau update</option>
+      <option value="Judgement removal">Judgement removal</option>
+      <option value="Credit advice">Credit advice</option>
+      <option value="Admin order removal">Admin order removal</option>
+    </select>
+  </div>
+
+  <div class="d-flex justify-content-between">
+    <!-- Submit to Email -->
+    <button class="btn btn-primary border-0 py-3 px-4" type="submit">
+      Book Consultation
+    </button>
+
+    <!-- Send to WhatsApp -->
+    <button class="btn btn-primary border-0 py-3 px-4" type="button" onclick="sendToWhatsApp()">
+      Book via WhatsApp
+    </button>
+  </div>
+</form>
+
+<script>
+function sendToWhatsApp() {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const date = document.getElementById("dateInput").value;
+  const time = document.getElementById("timeInput").value;
+  const service = document.getElementById("service").value;
+
+  const message = `Hello, I’d like to book a consultation.\n
+  Name: ${name}\n
+  Email: ${email}\n
+  Date: ${date}\n
+  Time: ${time}\n
+  Service: ${service}`;
+
+  const url = `https://wa.me/27XXXXXXXXX?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank");
+}
+</script>
+   
                     </div>
                 </div>
             </div>

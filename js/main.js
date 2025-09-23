@@ -197,6 +197,23 @@ function sendToWhatsApp() {
     ⏰ Time: ${time}%0A
     📝 Service: ${service}`;
 
-    let whatsappURL = `https://wa.me/27722226329?text=${message}`;
+    let whatsappURL = `https://wa.me/27793932311?text=${message}`;
     window.open(whatsappURL, "_blank");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const containers = document.querySelectorAll(".timelineContainer");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");   // animate when visible
+        observer.unobserve(entry.target);     // remove if you only want once
+      }
+    });
+  }, { threshold: 0.2 }); // 20% visible
+
+  containers.forEach(container => {
+    observer.observe(container);
+  });
+});
