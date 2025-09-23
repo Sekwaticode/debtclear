@@ -11210,7 +11210,7 @@ h6 {
 
 .text-box {
     padding: 20px 30px;
-    background: #000;
+    background: #8C4DC9;
     position: relative;
     border-radius: 6px;
     font-size: 15px;
@@ -11218,11 +11218,11 @@ h6 {
 
 .text-box h2 {
     font-weight: 600;
-    color: #fff;
+    color: #000;
 }
 
 .text-box p {
-    color: #fff;
+    color: #000;
 }
 
 .left-timelineContainer-arrow {
