@@ -40,7 +40,7 @@
                     <div class="col-lg-7 text-left">
                         <div class="h-100 d-inline-flex align-items-center py-2 px-3">
                             <i class="fa fa-envelope text-primary mr-2"></i>
-                            <small>info@cleardebt.com</small>
+                            <small>info@clear-debt.com</small>
                         </div>
                         <div class="h-100 d-inline-flex align-items-center py-2 px-2">
                             <i class="fa fa-phone-alt text-primary mr-2"></i>
@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
-                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                    <a href="#" class="navbar-brand d-block d-lg-none">
                         <h1 class="m-0 display-4 text-primary text-uppercase">ClearDebt</h1>
                     </a>
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -75,21 +75,11 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="#" class="nav-item nav-link active">Home</a>
-                            <a href="" class="nav-item nav-link">About</a>
-                            <a href="" class="nav-item nav-link">Services</a>
-                            <a href="" class="nav-item nav-link">Our Team</a>
+                            <a href="#about" class="nav-item nav-link">About</a>
+                            <a href="#services" class="nav-item nav-link">Services</a>
+                            <a href="#team" class="nav-item nav-link">Our Team</a>
                             <a href="iod.html" class="nav-item nav-link special-nav">IOD (Compensation Fund)</a>
-
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="#" class="dropdown-item">Debt Solutions</a>
-                                    <a href="#" class="dropdown-item">Credit Advice</a>
-                                    <a href="#" class="dropdown-item">Financial Tips</a>
-
-                                </div>
-                            </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <a href="#appointment" class="nav-item nav-link">Contact</a>
                         </div>
                         <a href="" class="btn btn-primary mr-3 d-none d-lg-block">Get a Free Consultation</a>
                     </div>
@@ -481,7 +471,7 @@ function sendToWhatsApp() {
                         </div>
                         <div class="team-item text-center bg-white rounded overflow-hidden pt-4">
                             <h5 class="mb-2 px-4">Zelda</h5>
-                            <p class="mb-3 px-4">Marketing Manager</p>
+                            <p class="mb-3 px-2">Marketing Manager</p>
                             <div class="team-img position-relative">
                                 <img class="img-fluid" src="img/zelda.jpg" alt="">
                                
@@ -673,30 +663,28 @@ function sendToWhatsApp() {
                     <a class="text-white mb-2" href="#services"><i class="fa fa-angle-right mr-2"></i>Services</a>
                     <a class="text-white mb-2" href="#team"><i class="fa fa-angle-right mr-2"></i>Advisors</a>
                     <a class="text-white" href="#appointment"><i class="fa fa-angle-right mr-2"></i>Contact</a>
-                </div>
+                </div> 
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="font-weight-semi-bold text-primary mb-4">Quick Links</h4>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="#faq"><i class="fa fa-angle-right mr-2"></i>FAQs</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Help</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Terms</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Privacy</a>
-                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Site Map</a>
-                </div>
+               <img src="img/logo.jpg">
             </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="font-weight-semi-bold text-primary mb-4">Newsletter</h4>
-                <p>Sign up to receive updates on debt relief strategies, financial tips, and ClearDebt news.</p>
-                <div class="w-100">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-0" style="padding: 25px;" placeholder="Your Email">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary px-4">Sign Up</button>
-                        </div>
-                    </div>
-                </div>
+          <div class="col-lg-3 col-md-6 mb-5">
+    <h4 class="font-weight-semi-bold text-primary mb-4">Let Us Contact You</h4>
+    <p>Leave your number and we’ll reach out with debt relief strategies, financial tips, and ClearDebt support.</p>
+    <form id="phone-number-form" action="https://api.web3forms.com/submit" method="POST" class="w-100">
+        <!-- Web3Forms Access Key -->
+        <input type="hidden" name="access_key" value="01f6d667-a3a2-4061-a63e-423227779cc4">
+
+        <div class="input-group">
+            <label for="phone" class="sr-only">Your Phone Number</label>
+            <input type="tel" class="form-control border-0" style="padding: 25px;" placeholder="Your Phone Number" id="phone" name="phone" required pattern="[0-9+ ]{7,15}">
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-primary px-4">Submit</button>
             </div>
+        </div>
+    </form>
+</div>
+
         </div>
         <div class="row p-4 mt-5 mx-0" style="background: rgba(256, 256, 256, .05);">
             <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
